@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <title>Background Generator</title>
+</head>
+
+<body>
+    <header>
+        <h1>Backgrond Image Geneartor</h1>
+        <p>Generate backgrounds on the fly</p>
+    </header>
+    <main>
+        <!-- Form -->
+        <section>
+            <div>
+                <label for="realName">Real Name</label>
+                <input id="realName" type="text">
+            </div>
+            <div>
+                <label for="githubUsername">GitHub Username</label>
+                <input id="githubUsername" type="text">
+            </div>
+            <div>
+                <label for="color1">Primary Color</label>
+                <input id="color1" type="color">
+            </div>
+            <div>
+                <label for="color2">Secondary Color</label>
+                <input id="color2" type="color">
+            </div>
+            <div>
+                <label for="color3">Tertiary Color</label>
+                <input id="color3" type="color">
+            </div>
+            <div>
+                <label for="projectTitle">Project Title</label>
+                <input id="projectTitle" type="text">
+            </div>
+            <div>
+                <label for="projectDescription">Project Description</label>
+                <input id="projectDescription" type="text">
+            </div>
+            <div>
+                <label for="projectLogo">Project Logo</label>
+                <input id="projectLogo" type="file" accept="image/*">
+            </div>
+            <div>
+                <label for="backgroundPattern">Background Pattern</label>
+                <input id="backgroundPattern" type="file" accept="image/*">
+            </div>
+
+
+            <button type="button" id="generateBtn">Generate</button>
+        </section>
+        <!-- / Form -->
+        <!-- Result -->
+        <section>
+            <div id="preview">
+                <div id="background-pattern"></div>
+                <div id="logo-info-wrapper">
+                    <div id="project-logo"></div>
+                    <div id="project-title-description-wrapper">
+                        <h1 id="project-title">Title</h1>
+                        <p id="project-description">Description</p>
+                    </div>
+                </div>
+                <p id="user-info">Info</p>
+            </div>
+        </section>
+        <!-- / Result -->
+    </main>
+    <footer></footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
