@@ -86,3 +86,11 @@
     /* entre granulado e conteúdo */
     pointer-events: none;
 }
+
+#icon-text {
+    display: flex;
+    gap: 8px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
