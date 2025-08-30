@@ -10,6 +10,7 @@ import {
   ProjectLogoInput,
   ProjectTitleInput,
   RealNameInput,
+  DownloadBtn,
 } from "./html-elements.js";
 
 import {
@@ -56,7 +57,11 @@ GenerateBtn.addEventListener("click", async () => {
     await setProjectLogo(userInfo.projectLogo, userInfo.colorThree);
 
   // Baixar preview
-  // downloadPreview();
+  DownloadBtn.disabled = false;
+});
+
+DownloadBtn.addEventListener("click", () => {
+  downloadPreview();
 });
 
 function downloadPreview() {
