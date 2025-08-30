@@ -1,22 +1,21 @@
-const RealNameInput = document.getElementById("realName");
-const GitHubUsernameInput = document.getElementById("githubUsername");
-const ColorOneInput = document.getElementById("color1");
-const ColorTwoInput = document.getElementById("color2");
-const ColorThreeInput = document.getElementById("color3");
-const ProjectTitleInput = document.getElementById("projectTitle");
-const ProjectDescriptionInput = document.getElementById("projectDescription");
-const ProjectLogoInput = document.getElementById("projectLogo");
-const BackgroundPatternImageInput =
-  document.getElementById("backgroundPattern");
-
-const GenerateBtn = document.getElementById("generateBtn");
-
-const PreviewDiv = document.getElementById("preview");
-const ProjectTitle = document.getElementById("project-title");
-const ProjectDescription = document.getElementById("project-description");
-const ProjectLogo = document.getElementById("project-logo");
-const UserInfo = document.getElementById("user-info");
-const bgPattern = document.getElementById("background-pattern");
+import {
+  BackgroundPatternImageInput,
+  ColorOneInput,
+  ColorThreeInput,
+  ColorTwoInput,
+  GenerateBtn,
+  GitHubUsernameInput,
+  PreviewDiv,
+  ProjectDescription,
+  ProjectDescriptionInput,
+  ProjectLogo,
+  ProjectLogoInput,
+  ProjectTitle,
+  ProjectTitleInput,
+  RealNameInput,
+  UserInfo,
+  bgPattern,
+} from "./html-elements.js";
 
 function fileToDataURL(file) {
   return new Promise((resolve) => {
