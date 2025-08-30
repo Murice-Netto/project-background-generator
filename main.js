@@ -33,7 +33,7 @@ GenerateBtn.addEventListener("click", async () => {
   };
 
   // Gradiente do preview
-  applySelectedGradientToPreviewBackground(PreviewDiv, [
+  applySelectedGradientToPreviewBackground([
     userInfo.colorOne,
     userInfo.colorTwo,
     userInfo.colorThree,

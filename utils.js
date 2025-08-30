@@ -4,6 +4,7 @@ import {
   ProjectDescription,
   ProjectLogo,
   ProjectTitle,
+  PreviewDiv,
 } from "./html-elements.js";
 
 export function fileToDataURL(file) {
