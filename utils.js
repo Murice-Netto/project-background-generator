@@ -38,7 +38,7 @@ export async function setBackgroundImagePattern(patternImage) {
     backgroundImage: `url('${bgDataUrl}')`,
     backgroundRepeat: "repeat",
     backgroundSize: "50px 50px",
-    opacity: "0.1",
+    opacity: "0.02",
   });
 }
 
