@@ -19,6 +19,6 @@ export const ProjectLogo = document.getElementById("project-logo");
 export const UserInfo = document.getElementById("user-info");
 export const bgPattern = document.getElementById("background-pattern");
 export const DownloadBtn = document.getElementById("download");
-export const PrgrammingLanguageSelect = document.getElementById(
+export const ProgrammingLanguageSelect = document.getElementById(
   "programming-language"
 );
