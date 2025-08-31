@@ -2,7 +2,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#preview {
+#preview-container {
     width: 100%;
     height: 400px;
     display: flex;
@@ -14,7 +14,7 @@
 }
 
 /* Granulado fractal */
-#preview:before {
+#preview-container:before {
     content: "";
     position: absolute;
     top: 0;
@@ -30,7 +30,7 @@
 }
 
 /* Div de conteúdo acima do fundo */
-#preview #logo-info-wrapper {
+#preview-container #preview-logo-info-wrapper {
     position: relative;
     z-index: 2;
     display: flex;
@@ -40,31 +40,31 @@
     gap: 20px;
 }
 
-#preview #logo-info-wrapper #project-title-description-wrapper {
+#preview-container #preview-logo-info-wrapper #preview-project-title-description-wrapper {
     display: flex;
     flex-direction: column;
     gap: 12px;
     text-align: center;
 }
 
-#preview #logo-info-wrapper #project-title {
+#preview-container #preview-logo-info-wrapper #preview-project-title {
     font-size: 70px;
     font-weight: bold;
 }
 
-#preview #logo-info-wrapper #project-description {
+#preview-container #preview-logo-info-wrapper #preview-project-description {
     font-style: italic;
     font-size: 24px;
 }
 
-#preview #user-info {
+#preview-container #preview-user-info {
     position: relative;
     z-index: 2;
     color: white;
     font-size: 18px;
 }
 
-#project-logo {
+#preview-project-logo {
     position: relative;
     z-index: 2;
     background-size: cover;
@@ -76,7 +76,7 @@
 }
 
 /* Div de background pattern (dinâmica via JS) */
-#background-pattern {
+#preview-background-pattern {
     position: absolute;
     top: 0;
     left: 0;
@@ -87,7 +87,7 @@
     pointer-events: none;
 }
 
-#icon-text {
+#preview-icon-text {
     display: flex;
     gap: 8px;
     color: white;
