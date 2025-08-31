@@ -1,16 +1,28 @@
 class ProgrammingLanguageData {
   #colors = [];
-  logoFileUrl = "";
-  backgroundImageUrl = "";
+  #logoFileUrl = "";
+  #backgroundImageUrl = "";
 
   constructor(colors, logoFilePath, backgroundImagePath) {
     this.#colors = colors;
-    this.logoFileUrl = URL.createObjectURL(logoFilePath);
-    this.backgroundImageUrl = URL.createObjectURL(backgroundImagePath);
+    this.#logoFileUrl = URL.createObjectURL(logoFilePath);
+    this.#backgroundImageUrl = URL.createObjectURL(backgroundImagePath);
   }
 
   get linearGradientToRight() {
     return `linear-gradient(to right, ${this.#colors.join(",")}`;
+  }
+
+  get colors() {
+    return this.#colors;
+  }
+
+  get logoFileUrl() {
+    return this.#logoFileUrl;
+  }
+
+  get backgroundImageUrl() {
+    return this.#backgroundImageUrl;
   }
 }
 
