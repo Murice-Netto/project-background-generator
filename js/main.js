@@ -24,13 +24,8 @@ GenerateBtn.addEventListener("click", async () => {
   const userInfo = {
     realName: RealNameInput.value,
     githubUsername: GitHubUsernameInput.value,
-    colorOne: ColorOneInput.value,
-    colorTwo: ColorTwoInput.value,
-    colorThree: ColorThreeInput.value,
     projectTitle: ProjectTitleInput.value,
     projectDescription: ProjectDescriptionInput.value,
-    projectLogo: ProjectLogoInput.files[0],
-    backgroundPatternImage: BackgroundPatternImageInput.files[0],
   };
 
   // Gradiente do preview
