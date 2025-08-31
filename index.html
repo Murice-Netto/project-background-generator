@@ -19,67 +19,54 @@
     <main>
         <!-- Form -->
         <section>
-            <div>
-                <label for="realName">Real Name</label>
-                <input id="realName" type="text">
+            <div class="input-wrapper">
+                <label for="project-title">Project Title</label>
+                <input id="project-title" type="text">
+            </div>
+            <div class="input-wrapper">
+                <label for="project-description">Project Description</label>
+                <input id="project-description" type="text">
+            </div>
+            <div class="input-wrapper">
+                <label for="real-name">Real Name</label>
+                <input id="real-name" type="text">
+            </div>
+            <div class="input-wrapper">
+                <label for="github-username">GitHub Username</label>
+                <input id="github-username" type="text">
+            </div>
+            <div class="input-wrapper">
+                <label for="programming-language">Programming Language</label>
+                <select name="programming-language" id="programming-language">
+                    <option value="typescript">TypeScript</option>
+                    <option value="rust">Rust</option>
+                </select>
             </div>
             <div>
-                <label for="githubUsername">GitHub Username</label>
-                <input id="githubUsername" type="text">
+                <button type="button" id="preview">Preview</button>
             </div>
-            <div>
-                <label for="color1">Primary Color</label>
-                <input id="color1" type="color">
-            </div>
-            <div>
-                <label for="color2">Secondary Color</label>
-                <input id="color2" type="color">
-            </div>
-            <div>
-                <label for="color3">Tertiary Color</label>
-                <input id="color3" type="color">
-            </div>
-            <div>
-                <label for="projectTitle">Project Title</label>
-                <input id="projectTitle" type="text">
-            </div>
-            <div>
-                <label for="projectDescription">Project Description</label>
-                <input id="projectDescription" type="text">
-            </div>
-            <div>
-                <label for="projectLogo">Project Logo</label>
-                <input id="projectLogo" type="file" accept="image/*">
-            </div>
-            <div>
-                <label for="backgroundPattern">Background Pattern</label>
-                <input id="backgroundPattern" type="file" accept="image/*">
-            </div>
-
-
-            <button type="button" id="generateBtn">Generate</button>
         </section>
         <!-- / Form -->
         <!-- Result -->
         <section>
-            <div id="preview">
-                <div id="background-pattern"></div>
-                <div id="logo-info-wrapper">
-                    <div id="project-logo"></div>
-                    <div id="project-title-description-wrapper">
-                        <h1 id="project-title">Title</h1>
-                        <p id="project-description">Description</p>
+            <div id="preview-container">
+                <div id="preview-background-pattern"></div>
+                <div id="preview-logo-info-wrapper">
+                    <div id="preview-project-logo"></div>
+                    <div id="preview-project-title-description-wrapper">
+                        <h1 id="preview-project-title">Title</h1>
+                        <p id="preview-project-description">Description</p>
                     </div>
                 </div>
-                <div id="icon-text">
+                <div id="preview-icon-text">
                     <i class="fa-brands fa-github"></i>
-                    <p id="user-info">Info</p>
+                    <p id="preview-user-info">Info</p>
                 </div>
             </div>
         </section>
         <!-- / Result -->
         <section>
-            <button id="download" disabled>Download</button>
+            <button id="download-cover" disabled>Download</button>
         </section>
     </main>
     <footer></footer>

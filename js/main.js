@@ -1,17 +1,14 @@
 import {
-  BackgroundPatternImageInput,
-  ColorOneInput,
-  ColorThreeInput,
-  ColorTwoInput,
   GenerateBtn,
   GitHubUsernameInput,
   PreviewDiv,
   ProjectDescriptionInput,
-  ProjectLogoInput,
   ProjectTitleInput,
   RealNameInput,
   DownloadBtn,
+  ProgrammingLanguageSelect,
 } from "./html-elements.js";
+import { typescript, rust } from "./programming-language-data.js";
 
 import {
   applySelectedGradientToPreviewBackground,
@@ -24,37 +21,43 @@ GenerateBtn.addEventListener("click", async () => {
   const userInfo = {
     realName: RealNameInput.value,
     githubUsername: GitHubUsernameInput.value,
-    colorOne: ColorOneInput.value,
-    colorTwo: ColorTwoInput.value,
-    colorThree: ColorThreeInput.value,
     projectTitle: ProjectTitleInput.value,
     projectDescription: ProjectDescriptionInput.value,
-    projectLogo: ProjectLogoInput.files[0],
-    backgroundPatternImage: BackgroundPatternImageInput.files[0],
   };
 
-  // Gradiente do preview
-  applySelectedGradientToPreviewBackground([
-    userInfo.colorOne,
-    userInfo.colorTwo,
-    userInfo.colorThree,
-  ]);
+  if (ProgrammingLanguageSelect.value === "typescript") {
+    // Gradiente do preview
+    applySelectedGradientToPreviewBackground(typescript.colors);
 
-  // Imagem de background pattern
-  if (userInfo.backgroundPatternImage)
-    await setBackgroundImagePattern(userInfo.backgroundPatternImage);
+    await setBackgroundImagePattern(typescript.backgroundImageFilePath);
 
-  // Conteúdo do preview
-  setProjectInfo(
-    userInfo.projectTitle,
-    userInfo.projectDescription,
-    userInfo.githubUsername,
-    userInfo.realName
-  );
+    // Conteúdo do preview
+    setProjectInfo(
+      userInfo.projectTitle,
+      userInfo.projectDescription,
+      userInfo.githubUsername,
+      userInfo.realName
+    );
 
-  // Logo do projeto
-  if (userInfo.projectLogo)
-    await setProjectLogo(userInfo.projectLogo, userInfo.colorThree);
+    await setProjectLogo(typescript.logoFilePath, typescript.colors);
+  }
+
+  if (ProgrammingLanguageSelect.value === "rust") {
+    // Gradiente do preview
+    applySelectedGradientToPreviewBackground(rust.colors);
+
+    await setBackgroundImagePattern(rust.backgroundImageFilePath);
+
+    // Conteúdo do preview
+    setProjectInfo(
+      userInfo.projectTitle,
+      userInfo.projectDescription,
+      userInfo.githubUsername,
+      userInfo.realName
+    );
+
+    await setProjectLogo(rust.logoFilePath, rust.colors);
+  }
 
   // Baixar preview
   DownloadBtn.disabled = false;
