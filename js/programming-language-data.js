@@ -32,4 +32,10 @@ const typescript = new ProgrammingLanguageData(
   "./assets/ts-logo-white.png"
 );
 
-export { typescript };
+const rust = new ProgrammingLanguageData(
+  ["#ffb371ff", "#E15B2A", "#993c1aff"],
+  "../assets/rust-logo-blk.svg",
+  "../assets/rust-logo-white.png"
+);
+
+export { typescript, rust };
