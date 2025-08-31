@@ -25,8 +25,6 @@ export function applySelectedGradientToPreviewBackground(colors) {
 }
 
 export async function setBackgroundImagePattern(patternImage) {
-  const bgDataUrl = await fileToDataURL(patternImage);
-
   Object.assign(bgPattern.style, {
     position: "absolute",
     top: "0",
@@ -35,7 +33,7 @@ export async function setBackgroundImagePattern(patternImage) {
     height: "100%",
     zIndex: "0",
     pointerEvents: "none",
-    backgroundImage: `url('${bgDataUrl}')`,
+    backgroundImage: `url('${patternImage}')`,
     backgroundRepeat: "repeat",
     backgroundSize: "50px 50px",
     opacity: "0.03",
@@ -53,14 +51,23 @@ export function setProjectInfo(title, description, githubUsername, realName) {
   UserInfo.style.zIndex = 2;
 }
 
-export async function setProjectLogo(logo, innerShadowColor) {
-  const logoDataUrl = await fileToDataURL(logo);
-
+export async function setProjectLogo(logo, colors) {
   ProjectLogo.style.backgroundImage = `
-      linear-gradient(to bottom right, ${innerShadowColor}, rgba(0,0,0, 0.1), ${innerShadowColor}),
-      url('${logoDataUrl}')
+      linear-gradient(to bottom right, ${hexToRGBA(
+        colors[0],
+        0.3
+      )}, ${hexToRGBA(colors[1], 0.3)}, ${hexToRGBA(colors[2], 0.3)}),
+      url('${logo}')
     `;
   ProjectLogo.style.backgroundSize = "cover";
   ProjectLogo.style.backgroundPosition = "center";
   ProjectLogo.style.zIndexbackgroundPosition = 2;
+}
+
+export function hexToRGBA(hex, alpha) {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  if (alpha) return `rgba(${r},${g},${b},${alpha})`;
+  return `rgba(${r},${g},${b},1)`;
 }
