@@ -1,13 +1,8 @@
 import {
-  BackgroundPatternImageInput,
-  ColorOneInput,
-  ColorThreeInput,
-  ColorTwoInput,
   GenerateBtn,
   GitHubUsernameInput,
   PreviewDiv,
   ProjectDescriptionInput,
-  ProjectLogoInput,
   ProjectTitleInput,
   RealNameInput,
   DownloadBtn,
