@@ -60,6 +60,7 @@ export async function setProjectLogo(logo, colors) {
       url('${logo}')
     `;
   ProjectLogo.style.backgroundSize = "cover";
+  ProjectLogo.style.border = `1px solid ${colors[0]}`;
   ProjectLogo.style.backgroundPosition = "center";
   ProjectLogo.style.zIndexbackgroundPosition = 2;
 }
