@@ -2,11 +2,15 @@ class ProgrammingLanguageData {
   #colors = [];
   #logoFileUrl = "";
   #backgroundImageUrl = "";
+  #logoFilePath = "";
+  #backgroundImagePath = "";
 
   constructor(colors, logoFilePath, backgroundImagePath) {
     this.#colors = colors;
     this.#logoFileUrl = URL.createObjectURL(logoFilePath);
     this.#backgroundImageUrl = URL.createObjectURL(backgroundImagePath);
+    this.#backgroundImagePath = backgroundImagePath;
+    this.#logoFilePath = logoFilePath;
   }
 
   get linearGradientToRight() {
@@ -23,6 +27,14 @@ class ProgrammingLanguageData {
 
   get backgroundImageUrl() {
     return this.#backgroundImageUrl;
+  }
+
+  get logoFilePath() {
+    return this.#logoFilePath;
+  }
+
+  get backgroundImageFilePath() {
+    return this.#backgroundImagePath;
   }
 }
 
