@@ -1,24 +1,25 @@
-export const RealNameInput = document.getElementById("realName");
-export const GitHubUsernameInput = document.getElementById("githubUsername");
+export const RealNameInput = document.getElementById("real-name");
+export const GitHubUsernameInput = document.getElementById("github-username");
 export const ColorOneInput = document.getElementById("color1");
 export const ColorTwoInput = document.getElementById("color2");
 export const ColorThreeInput = document.getElementById("color3");
-export const ProjectTitleInput = document.getElementById("projectTitle");
-export const ProjectDescriptionInput =
-  document.getElementById("projectDescription");
-export const ProjectLogoInput = document.getElementById("projectLogo");
+export const ProjectTitleInput = document.getElementById("project-title");
+export const ProjectDescriptionInput = document.getElementById(
+  "project-description"
+);
+export const ProjectLogoInput = document.getElementById("project-logo");
 export const BackgroundPatternImageInput =
-  document.getElementById("backgroundPattern");
-export const GenerateBtn = document.getElementById("generateBtn");
-export const PreviewDiv = document.getElementById("preview");
-export const ProjectTitle = document.getElementById("project-title");
+  document.getElementById("background-pattern");
+export const GenerateBtn = document.getElementById("preview");
+export const PreviewDiv = document.getElementById("preview-container");
+export const ProjectTitle = document.getElementById("preview-project-title");
 export const ProjectDescription = document.getElementById(
   "project-description"
 );
-export const ProjectLogo = document.getElementById("project-logo");
-export const UserInfo = document.getElementById("user-info");
-export const bgPattern = document.getElementById("background-pattern");
-export const DownloadBtn = document.getElementById("download");
+export const ProjectLogo = document.getElementById("preview-project-logo");
+export const UserInfo = document.getElementById("preview-user-info");
+export const bgPattern = document.getElementById("preview-background-pattern");
+export const DownloadBtn = document.getElementById("download-cover");
 export const ProgrammingLanguageSelect = document.getElementById(
   "programming-language"
 );
